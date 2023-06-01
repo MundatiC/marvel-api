@@ -1,0 +1,7 @@
+.card .title h3 {
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
