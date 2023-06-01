@@ -1,6 +1,6 @@
 {
+  "homepage": "http://mundatic.github.io/marvel-api",
   "name": "marvel-api",
-  "homepage": "http://MundatiC.github.io/marvel-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
