@@ -1,10 +1,10 @@
-// Marvel.jsx
+
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-export const Marvel = () => {
+export const Specific = () => {
   const { id, category } = useParams();
   const [item, setItem] = useState(null);
   const [relatedItems, setRelatedItems] = useState(null);

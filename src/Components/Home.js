@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Card } from "./Card";
 import axios from "axios";
 
-export const Main = () => {
+export const Home = () => {
   const [category, setCategory] = useState("characters");
   const [url, setUrl] = useState(
     `https://gateway.marvel.com/v1/public/${category}?limit=52&ts=1&apikey=8dd9c2fc8c979833c8f529e9f1553158&hash=d6df1a7be1fb8a2d1a3b2e184da7b7b7`
@@ -65,7 +65,7 @@ export const Main = () => {
           <img src="./Images/logo1.png" alt="logo" className="logo" />
           <input
             type="search"
-            placeholder="Search Here"
+            placeholder="Search"
             className="search"
             value={search}
             onChange={handleSearch}

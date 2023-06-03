@@ -1,15 +1,15 @@
 import React from 'react';
-import { Main } from './Components/Main';
+import { Home } from './Components/Home';
 import './Components/style.css';
 import {Routes,Route} from 'react-router-dom'
-import { Marvel } from './Components/Marvel';
+import { Specific } from './Components/Specific';
 
 function App() {
   return (
     <>
      <Routes>
-       <Route path='/'element={<Main/>}/>
-       <Route path="/:category/:id" element={<Marvel />} />
+       <Route path='/'element={<Home/>}/>
+       <Route path="/:category/:id" element={<Specific />} />
      </Routes>
     </>
   )
