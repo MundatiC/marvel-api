@@ -83,10 +83,10 @@ export const Home = () => {
 
         <div className="bg">
           <div className="text-overlay">
-            {/* <h1>Welcome to Marvel</h1>
-            <p>The home of heroes</p> */}
+            <h1>Welcome to Marvel</h1>
+            <p>The home of heroes</p>
           </div>
-          <img src="./Images/bg1.jpg" alt="" />
+          <img src="./Images/cap_iron.jpg" alt="" />
         </div>
       </div>
       <div className="content">

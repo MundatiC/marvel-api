@@ -5,7 +5,7 @@
   }
   
   body {
-    background: linear-gradient(180deg, #000000, #410000, #000033);
+    background: linear-gradient(180deg, #000000, #000033, #410000);
   }
   
   .header .bg {
@@ -17,7 +17,7 @@
   .header .bg .text-overlay {
     position: absolute;
     top: 60%;
-    left: 30%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
@@ -47,7 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1%;
     z-index: 100;
     width: 100%;
   }
@@ -57,12 +57,6 @@
     height: auto;
   }
   
-  .search-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-  }
   
   .search {
     outline: none;
@@ -75,16 +69,16 @@
     color: white;
     font-size: 20px;
     padding: 1.2rem;
-    border: 2px solid #b41f23;
+    border: 2px solid #ED181F;
   }
   
   .category-select select {
-    background-color: #b41f23;
+    background-color: #ED181F;
     padding: 8px 16px;
     border: 0.5px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
-    outline: #b41f23;
+    outline: #ED181F;
     color: white;
     font-size: 16px;
   }
@@ -112,13 +106,15 @@
   }
   
   .card {
-    background-color: #1f5bb4;
+    background-color: #ED181F;
     color: white;
     position: relative;
     margin-top: 3rem;
     padding: 1.5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding-bottom: 0%;
     margin-bottom: 0%;
     transition: 0.5s;
@@ -131,8 +127,8 @@
     width: 100%;
     height: 70%;
     object-fit: cover;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
   
   .card:hover {
@@ -155,23 +151,29 @@
   .box-content {
     width: 100%;
     margin: 0 auto;
-    height: 600px;
+    height: 800px;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
-      url(marvel1.jpg);
+      url(scary.jpg);
     color: white;
     font-size: 1.3rem;
     text-align: justify;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-repeat: no-repeat;
   }
   
   .right-box {
     flex-basis: 20%;
   }
+
   
   .left-box {
     flex-basis: 50%;
+  }
+
+  .left-box h1{
+    color: #b41f23;
   }
   
   .box-content img {
@@ -218,13 +220,6 @@
   /* Responsive Styles */
   
   @media (max-width: 768px) {
-    .search-bar {
-      width: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
   
     .header .search {
       width: 100%;
@@ -237,7 +232,6 @@
   
     .content {
       width: 100%;
-      margin: 3rem auto;
       grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
     }
   
@@ -256,6 +250,10 @@
   }
   
   @media (max-width: 480px) {
+    .navbar{
+      align-items: center;
+      justify-content: space-around;
+    }
     .logo {
       width: 80px;
     }
@@ -270,10 +268,11 @@
     }
   
     .content {
-      grid-template-columns: repeat(auto-fit, minmax(150px, min-content));
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
       grid-gap: 0.5rem;
-      margin-left: .5em;
-      margin-right: .5em;
+      margin-left: .6em;
+      
 
     }
   
