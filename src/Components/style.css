@@ -189,7 +189,8 @@
   }
   
   .related-stuff {
-    margin-top: 2em;
+    margin-top: 0em;
+    background: linear-gradient(180deg, #000000, #000033, #410000);
     
   }
   
@@ -301,7 +302,8 @@
       width: 100%;
       margin-right: 2%;
       margin-left: 2%;
-      grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+      grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+      justify-content: center;
 
     }
 
