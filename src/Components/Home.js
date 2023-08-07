@@ -49,14 +49,14 @@ export const Home = () => {
   };
   
 
-  const handleCategoryChange = (e) => {
-    const selectedCategory = e.target.value;
+  const handleCategoryChange = (selectedCategory) => {
     setCategory(selectedCategory);
     setSearch("");
     setUrl(
       `https://gateway.marvel.com/v1/public/${selectedCategory}?limit=52&ts=1&apikey=8dd9c2fc8c979833c8f529e9f1553158&hash=d6df1a7be1fb8a2d1a3b2e184da7b7b7`
     );
   };
+  
 
   return (
     <>
@@ -70,14 +70,37 @@ export const Home = () => {
             value={search}
             onChange={handleSearch}
           />
-          <div className="category-select">
-            <select value={category} onChange={handleCategoryChange}>
-              <option value="characters">Characters</option>
-              <option value="comics">Comics</option>
-              <option value="creators">Creators</option>
-              <option value="events">Events</option>
-              <option value="stories">Stories</option>
-            </select>
+           <div className="category-nav">
+            <button
+              className={category === "characters" ? "active" : ""}
+              onClick={() => handleCategoryChange("characters")}
+            >
+              Characters
+            </button>
+            <button
+              className={category === "comics" ? "active" : ""}
+              onClick={() => handleCategoryChange("comics")}
+            >
+              Comics
+            </button>
+            <button
+              className={category === "creators" ? "active" : ""}
+              onClick={() => handleCategoryChange("creators")}
+            >
+              Creators
+            </button>
+            <button
+              className={category === "events" ? "active" : ""}
+              onClick={() => handleCategoryChange("events")}
+            >
+              Events
+            </button>
+            <button
+              className={category === "stories" ? "active" : ""}
+              onClick={() => handleCategoryChange("stories")}
+            >
+              Stories
+            </button>
           </div>
         </div>
 

@@ -36,7 +36,7 @@
   
   .header .bg img {
     width: 100%;
-    height: auto;
+    height: 60vh;
     opacity: 0.5;
   }
   
@@ -72,28 +72,25 @@
     border: 2px solid #ED181F;
   }
   
-  .category-select select {
-    background-color: #ED181F;
-    padding: 8px 16px;
-    border: 0.5px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-    outline: #ED181F;
+  .category-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .category-nav button {
+    background-color: transparent;
+    border: none;
     color: white;
     font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
   }
   
-  .category-select select option {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
-  
-  .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
+  .category-nav button.active {
+    background-color: #ED181F;
+    border-radius: 5px;
   }
   
   .content {
@@ -270,7 +267,7 @@
   
     .content {
       justify-content: center;
-      grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+      grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
       grid-gap: 0.5rem;
       margin-left: .6em;
       
